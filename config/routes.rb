@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'comments/new'
   mount RailsAdmin::Engine => '/enter', as: 'rails_admin'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   get 'sessions/new'
@@ -23,5 +24,7 @@ Rails.application.routes.draw do
   get 'favorites/index'
   post '/favorites', to: 'favorites#create'
   post '/unfavorites', to: 'favorites#destroy'
+  
+  resources :comments
     
 end
