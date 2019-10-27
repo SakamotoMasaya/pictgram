@@ -1,7 +1,6 @@
 class FavoritesController < ApplicationController
   def index
     @favorite_topics = current_user.favorite_topics
-    @favorite_count = Favorite.where(topic_id: params[:topic_id]).count
   end
   
   def create
