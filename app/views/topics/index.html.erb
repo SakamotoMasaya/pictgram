@@ -22,12 +22,18 @@
             <span class="favorite_count">
               <%= topic.favorite_users.count %>
             </span>
-            <%= link_to new_comment_path do %>
+            <%= link_to new_topic_comment_path(topic.id) do %>
               <%= image_tag 'icons/comment.png', class: 'topic-index-icon' %>
             <% end %>
             <p class="topic-text">
               <%= topic.description %>
             </p>
+            <div class="comments">
+            <h4>コメント</h4>
+              <% @comments.each do |comment| %>
+                <p><%= comment.body %></p>
+              <% end %>
+            </div>
           </div>
         </div>
       </div>
