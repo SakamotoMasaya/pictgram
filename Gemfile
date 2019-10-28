@@ -45,7 +45,7 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'pry-stack_explorer'
   
-  gem 'rails_admin'
+  
   
 end
 
@@ -80,6 +80,8 @@ gem 'bootstrap-sass'
 gem 'bcrypt'
 
 gem 'carrierwave'
+
+gem 'rails_admin'
 
 
 
